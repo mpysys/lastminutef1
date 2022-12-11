@@ -1,0 +1,24 @@
+[{
+    "pk": 1,
+    "model": "tickets.category",
+    "fields": {
+        "name": "paddockclub",
+        "friendly_name": "Paddock Club"
+    }
+}, {
+    "pk": 2,
+    "model": "tickets.category",
+    "fields": {
+        "name": "teampaddock",
+        "friendly_name": "Team Paddock"
+    }
+}, 
+
+{
+    "pk": 3,
+    "model": "tickets.category",
+    "fields": {
+        "name": "grandstands",
+        "friendly_name": "Grandstands"
+    }
+}, 
