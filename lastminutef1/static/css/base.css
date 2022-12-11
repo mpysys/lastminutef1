@@ -48,10 +48,6 @@ body {
     color: white;
 }
 
-.primary-nav {
-    color: #e10600 !important;
-}
-
 .text-black {
     color: #000 !important;
 }
@@ -61,13 +57,17 @@ body {
     border-radius: 6px;
 }
 
-.text-nav-red {
-    color: #e10600 !important;
-    z-index: 1;
-}
-
 .border-black {
     border: 1px solid black !important;
+}
+
+.hero-bg-white {
+    background-color: white;
+    opacity: 0.7;
+}
+
+.text-nav-red {
+    color: #e10600;
 }
 
 /* -------------------------------- Media Queries */
