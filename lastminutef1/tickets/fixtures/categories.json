@@ -12,13 +12,11 @@
         "name": "teampaddock",
         "friendly_name": "Team Paddock"
     }
-}, 
-
-{
+}, {
     "pk": 3,
     "model": "tickets.category",
     "fields": {
         "name": "grandstands",
         "friendly_name": "Grandstands"
     }
-}, 
+}]
