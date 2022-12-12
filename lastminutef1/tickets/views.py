@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Ticket
+from .models import Ticket, Category
 
 # Create your views here.
 
@@ -10,6 +10,13 @@ def all_tickets(request):
 
     tickets = Ticket.objects.all()
     query = None
+    categories = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            tickets = tickets.filter(category__name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
     if request.GET:
         if 'q' in request.GET:
@@ -24,6 +31,7 @@ def all_tickets(request):
     context = {
         'tickets': tickets,
         'search_term': query,
+        'current_categories': categories,
     }
 
     return render(request, 'tickets.html', context)

@@ -17,8 +17,11 @@
                 Paddock Club & Teams
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">Paddock Club</a>
-                <a href="" class="dropdown-item ">Team Hospitality</a>
+                <a href="{% url 'tickets' %}?category=paddockclub" class="dropdown-item">Paddock Club</a>
+                <a href="{% url 'tickets' %}?category=teampaddock" class="dropdown-item ">Team Hospitality</a>
+                <a href="{% url 'tickets' %}?category=grandstands" class="dropdown-item ">Grandstands</a>
+                <a href="" class="dropdown-item ">Packages</a>
+                <a href="{% url 'tickets' %}?category=paddockclub,teampaddock,grandstands" class="dropdown-item ">All VIP Hospitality</a>
             </div>
         </li>
 
