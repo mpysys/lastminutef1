@@ -70,6 +70,31 @@ body {
     color: #e10600;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #f2f3f7;
+    z-index: -1;
+}
+
+.flag-country {
+    width: 50px;
+    height: 50px;
+}
+
+.row-div {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Having some margin to make the two divs some distance */
+  .row-div>div {
+    margin-right: 5px;
+  }
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

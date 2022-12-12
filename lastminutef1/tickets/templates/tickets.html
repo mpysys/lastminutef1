@@ -10,10 +10,81 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container">
+    <div class="overlay"></div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col">
-                {{ tickets }}
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Tickets</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container col-10 offset-1">
+                <div class="row mt-1 mb-2"></div>
+                <div class="row">
+                    {% for ticket in tickets %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                <div class="card-body pb-0">
+                                    <div class="col">
+                                        <img class="card-img-top img-fluid flag-country" src="{{ ticket.countryimg.url }}" alt="{{ ticket.race }}">
+                                        <p class="lead mb-0 text-left font-weight-bold">{{ ticket.country }}</p>
+                                        <p class="mb-0"><strong></strong></p>
+                                        <p class="mb-0">{{ ticket.race }}</p>
+                                    </div>
+                                    <hr>
+                                </div>
+                                {% if ticket.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
+                                </a>
+                                {% endif %}
+                                <div class="card-footer bg-white pt-0 border-0 text-right">
+                                    <div class="col">
+                                        <p class="lead mb-0 text-right font-weight-bold">${{ ticket.price }}</p>
+                                        {% if ticket.category %}
+                                        <p class="mt-1 mb-0">
+                                            <a class="text-muted" href="{% url 'tickets' %}?category={{ ticket.category.name }}">
+                                                <i class="fas fa-tag mr-1"></i>{{ ticket.category.friendly_name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
+                                        {% if request.user.is_superuser %}
+                                            <small class="ml-3">
+                                                <a href="">Edit</a> |
+                                                <a class="text-danger" href="">Delete</a>
+                                            </small>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if forloop.counter|divisibleby:1 %}
+                            <div class="col-12 d-sm-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}                        
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:3 %}
+                            <div class="col-12 d-none d-lg-block d-xl-none mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                        {% if forloop.counter|divisibleby:4 %}
+                            <div class="col-12 d-none d-xl-block mb-5">
+                                <hr>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
