@@ -35,11 +35,11 @@
                                     <hr>
                                 </div>
                                 {% if ticket.image %}
-                                <a href="">
+                                <a href="{% url 'ticket_detail' ticket.id %}">
                                     <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'ticket_detail' ticket.id %}">
                                     <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
                                 </a>
                                 {% endif %}
