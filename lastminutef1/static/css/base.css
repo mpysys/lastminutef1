@@ -117,7 +117,7 @@ body {
     justify-content: center;
   }
 
-  a.category-badge > span.badge:hover {
+a.category-badge > span.badge:hover {
     background: #e10600 !important;
     color: #fff !important;
 }
@@ -132,6 +132,14 @@ body {
 
 .btt-link {
     cursor: pointer;
+}
+
+.header-icon {
+    color: #e10600 !important;
+}
+
+.header-icon:hover {
+    color: #ad0701 !important;
 }
 
   /* Having some margin to make the two divs some distance */
