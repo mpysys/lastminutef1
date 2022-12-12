@@ -71,6 +71,10 @@ body {
     color: #000 !important;
 }
 
+.text-red {
+    color: #e10600 !important;
+}
+
 .text-white {
     color: #fff !important;
     border-radius: 6px;

@@ -21,14 +21,14 @@ def cart_contents(request):
             'ticket': ticket,
         })
 
-    if total < settings.DISCOUNT_THRESHOLD:
+    if total > settings.DISCOUNT_THRESHOLD:
         discount = total * Decimal(settings.STANDARD_PROMOTION_PERCENTAGE  / 100)
         discount_delta = settings.DISCOUNT_THRESHOLD - total
     else:
         discount = 0
         discount_delta = 0
 
-    grand_total = discount + total
+    grand_total = total - discount
     
     context = {
         'cart_items': cart_items,
