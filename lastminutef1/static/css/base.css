@@ -24,6 +24,11 @@ body {
     color: #e10600 !important;
 }
 
+.logo-font-discount {
+    text-transform: uppercase;
+    color: white !important;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -69,6 +74,10 @@ body {
 
 .border-red {
     border: 1px solid #e10600 !important;
+}
+
+.discount-bg {
+    background-color: #e10600;
 }
 
 .text-nav-red {

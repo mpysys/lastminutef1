@@ -80,7 +80,7 @@
                       </div>
                   </li>
                   <li class="list-inline-item">
-                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-nav-red{% endif %} nav-link" href="">
+                      <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-nav-red{% endif %} nav-link" href="{% url 'view_cart' %}">
                           <div class="text-center">
                               <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                               <p class="my-0">
@@ -104,6 +104,11 @@
             {% include 'includes/mobile-top-header.html' %}
             {% include 'includes/main-nav.html' %}
         </nav>
+    </div>
+    <div id="discount-banner" class="row text-center">
+        <div class="col discount-bg text-white">
+            <h4 class="logo-font-discount my-1">Discount on ticket values of over ${{ discount_threshold }}!</h4>                
+        </div>            
     </div>
     </header>
 
