@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    color: #e10600 !important;
 }
 
 .main-logo-link {
@@ -66,8 +67,12 @@ body {
     opacity: 0.7;
 }
 
+.border-red {
+    border: 1px solid #e10600 !important;
+}
+
 .text-nav-red {
-    color: #e10600;
+    color: #e10600 !important;
 }
 
 .overlay {
@@ -89,6 +94,23 @@ body {
     display: flex;
     justify-content: center;
   }
+
+  a.category-badge > span.badge:hover {
+    background: #e10600 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
 
   /* Having some margin to make the two divs some distance */
   .row-div>div {

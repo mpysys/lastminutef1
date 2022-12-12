@@ -30,6 +30,13 @@
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ ticket.race }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ ticket.price }}</p>
+                    {% if ticket.category %}
+                    <p class="mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'tickets' %}?category={{ ticket.category.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ ticket.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     <p class="mt-3">{{ ticket.description }}</p>
                 </div>
             </div>

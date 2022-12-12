@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Ticket, Category
 
 # Create your views here.
@@ -20,8 +21,9 @@ def all_tickets(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                tickets = tickets.annotate(lower_name=Lower('country'))
-
+                tickets = tickets.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -42,7 +44,7 @@ def all_tickets(request):
             queries = Q(race__icontains=query) | Q(description__icontains=query) | Q(country__icontains=query)
             tickets = tickets.filter(queries)
 
-        current_sorting = f'{sort}_{direction}'
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'tickets': tickets,
