@@ -39,17 +39,30 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
+.btn-red {
     background: #e10600;
     color: white;
+}
+
+.btn-outline-red {
+    background: white;
+    color: #e10600 !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #e10600;
+}
+
+.btn-outline-red:hover,
+.btn-outline-red:active,
+.btn-outline-red:focus {
+    background: #e10600;
+    color: white !important;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-red:hover,
+.btn-red:active,
+.btn-red:focus {
     background: #e10600;
     color: white;
 }
