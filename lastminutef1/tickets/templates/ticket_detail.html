@@ -41,6 +41,17 @@
                     <form class="form" action="{% url 'add_to_cart' ticket.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
+                            {% with ticket.has_days as s %}
+                            {% if s %}
+                                <div class="col-12">
+                                    <p><strong>Days:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="race_length" id='id_race_length'>
+                                        <option value="Friday">Friday</option>
+                                        <option value="Sat &#38; Sun">Sat & Sun</option>
+                                        <option value="Fri, Sat &#38; Sun" selected>Fri, Sat & Sun</option>
+                                    </select>
+                                </div>
+                            {% endif %}
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
@@ -50,7 +61,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
+                            <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'tickets' %}" class="btn btn-outline-red rounded-0 mt-5">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
@@ -60,6 +71,7 @@
                                 <input type="submit" class="btn btn-red rounded-0 text-uppercase mt-5" value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            {% endwith %}
                         </div>
                     </form>
                 </div>
