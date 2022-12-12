@@ -5,9 +5,9 @@
                 All Tickets
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Race</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'tickets' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'tickets' %}?sort=country&direction=asc" class="dropdown-item ">By Country</a>
+                <a href="{% url 'tickets' %}?sort=price&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'tickets' %}" class="dropdown-item">All Tickets</a>
             </div>
         </li>
