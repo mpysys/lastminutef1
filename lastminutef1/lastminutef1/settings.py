@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'home',
     'tickets',
     'cart',
+    'checkout',
 ]
 
 MIDDLEWARE = [
@@ -161,4 +162,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 DISCOUNT_THRESHOLD = 5000
-STANDARD_PROMOTION_PERCENTAGE = 15
+STANDARD_DISCOUNT_PERCENTAGE = 15

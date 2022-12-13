@@ -34,7 +34,7 @@ def cart_contents(request):
                 })
 
     if total > settings.DISCOUNT_THRESHOLD:
-        discount = total * Decimal(settings.STANDARD_PROMOTION_PERCENTAGE / 100)
+        discount = total * Decimal(settings.STANDARD_DISCOUNT_PERCENTAGE / 100)
         discount_delta = settings.DISCOUNT_THRESHOLD - total
     else:
         discount = 0
