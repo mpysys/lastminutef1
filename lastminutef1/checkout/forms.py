@@ -2,7 +2,7 @@ from django import forms
 from .models import TicketOrder
 
 
-class OrderForm(forms.ModelForm):
+class TicketOrderForm(forms.ModelForm):
     class Meta:
         model = TicketOrder
         fields = ('full_name', 'email', 'phone_number',
