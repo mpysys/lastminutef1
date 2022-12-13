@@ -41,3 +41,52 @@ def add_to_cart(request, item_id):
 
     request.session['cart'] = cart
     return redirect(redirect_url)
+
+
+def adjust_cart(request, item_id):
+    """ Adjust the quantity of the specified ticket to the shopping cart """
+
+    ticket = get_object_or_404(Ticket, pk=item_id) 
+    quantity = int(request.POST.get('quantity'))
+    racelength = None
+    if 'race_length' in request.POST:
+        racelength = request.POST['race_length']
+    cart = request.session.get('cart', {})
+
+    if racelength:
+        if quantity > 0:
+            cart[item_id]['race_by_length'][racelength] = quantity
+        else:
+            del cart[item_id]['race_by_length'][racelength]
+            if not cart[item_id]['race_by_length']:
+                cart.pop(item_id)
+    else:
+        if quantity > 0:
+            cart[item_id] = quantity
+        else:
+            cart.pop(item_id)
+
+    request.session['cart'] = cart
+    return redirect(reverse('view_cart'))
+
+
+def remove_from_cart(request, item_id):
+    """ Remove the item / ticket from the shopping cart """
+    try:
+        racelength = None
+        if 'race_length' in request.POST:
+            racelength = request.POST['race_length']
+        cart = request.session.get('cart', {})
+
+        if racelength:
+                del cart[item_id]['race_by_length'][racelength]
+                if not cart[item_id]['race_by_length']:
+                    cart.pop(item_id)
+        else:
+            cart.pop(item_id)
+
+        request.session['cart'] = cart
+        return HttpResponse(status=200)
+        
+    except Exception as e:
+        return HttpResponse(status=500)
