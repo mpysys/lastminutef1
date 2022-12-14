@@ -56,6 +56,7 @@ form.addEventListener('submit', function(ev) {
         }
     }).then(function(result) {
         if (result.error) {
+            // showing error to the customer
             var errorDiv = document.getElementById('card-errors');
             var html = `
                 <span class="icon" role="alert">
@@ -66,8 +67,10 @@ form.addEventListener('submit', function(ev) {
             card.update({ 'disabled': false});
             $('#submit-button').attr('disabled', false);
         } else {
+            // payment processed
             if (result.paymentIntent.status === 'succeeded') {
                 form.submit();
+                // show customer success message
             }
         }
     });

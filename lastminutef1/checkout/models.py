@@ -33,7 +33,7 @@ class TicketOrder(models.Model):
         Update grand total each time a line item is added,
         accounting for discount_value.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.DISCOUNT_THRESHOLD:
             self.discount_value = 0
         else:
@@ -59,7 +59,7 @@ class OrderLineItem(models.Model):
     ticket = models.ForeignKey(Ticket, null=False, blank=False, on_delete=models.CASCADE)
     ticket_days = models.CharField(max_length=2, null=True, blank=True) # Fri; Sat & Sun; Fri, Sat & Sun
     quantity = models.IntegerField(null=False, blank=False, default=0)
-    lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+    lineitem_total = models.DecimalField(max_digits=100, decimal_places=2, null=False, blank=False, editable=False)
 
     def save(self, *args, **kwargs):
         """
