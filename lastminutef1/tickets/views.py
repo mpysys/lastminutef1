@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Ticket, Category
+from .forms import TicketForm
 
 # Create your views here.
 
@@ -66,3 +68,24 @@ def ticket_detail(request, ticket_id):
     }
 
     return render(request, 'ticket_detail.html', context)
+
+
+def add_ticket(request):
+    """ Add a product to the store """
+    if request.method == 'POST':
+        form = TicketForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added product!')
+            return redirect(reverse('add_ticket'))
+        else:
+            messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
+    else:
+        form = TicketForm()
+        
+    template = 'add_ticket.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)

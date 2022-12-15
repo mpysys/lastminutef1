@@ -54,7 +54,15 @@
                             <div class="card h-100 border-0">
                                 <div class="card-body pb-0">
                                     <div class="col">
-                                        <img class="card-img-top img-fluid flag-country" src="{{ ticket.countryimg.url }}" alt="{{ ticket.race }}">
+                                        {% if ticket.image %}
+                                        <a href="{% url 'ticket_detail' ticket.id %}">
+                                            <img class="card-img-top img-fluid flag-country" src="{{ ticket.countryimg.url }}" alt="{{ ticket.race }}">
+                                        </a>
+                                        {% else %}
+                                        <a href="{% url 'ticket_detail' ticket.id %}">
+                                            <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
+                                        </a>
+                                        {% endif %}
                                         <p class="lead mb-0 text-left font-weight-bold">{{ ticket.country }}</p>
                                         <p class="mb-0"><strong></strong></p>
                                         <p class="mb-0">{{ ticket.race }}</p>
