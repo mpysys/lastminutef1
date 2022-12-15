@@ -75,9 +75,9 @@ def add_ticket(request):
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            ticket = form.save()
             messages.success(request, 'Successfully added ticket!')
-            return redirect(reverse('add_ticket'))
+            return redirect(reverse('ticket_detail', args=[ticket.id]))
         else:
             messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
     else:
@@ -113,3 +113,11 @@ def edit_ticket(request, ticket_id):
     }
 
     return render(request, template, context)
+
+
+def delete_ticket(request, ticket_id):
+    """ Delete a product from the store """
+    ticket = get_object_or_404(Ticket, pk=ticket_id)
+    ticket.delete()
+    messages.success(request, 'Ticket deleted!')
+    return redirect(reverse('tickets'))
