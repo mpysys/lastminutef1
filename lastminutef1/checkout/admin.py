@@ -26,4 +26,5 @@ class TicketOrderAdmin(admin.ModelAdmin):
 
     ordering = ('-date',)
 
+
 admin.site.register(TicketOrder, TicketOrderAdmin)

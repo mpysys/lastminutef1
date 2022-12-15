@@ -39,9 +39,9 @@ def cart_contents(request):
     else:
         discount = 0
         discount_delta = settings.DISCOUNT_THRESHOLD - total
-    
-    grand_total = total - discount 
-    
+
+    grand_total = total - discount
+
     context = {
         'cart_items': cart_items,
         'total': total,
