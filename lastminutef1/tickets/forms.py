@@ -1,4 +1,5 @@
 from django import forms
+from .widgets import CustomClearableFileInput, CustomClearableFileInputImg
 from .models import Ticket, Category
 
 
@@ -7,6 +8,9 @@ class TicketForm(forms.ModelForm):
     class Meta:
         model = Ticket
         fields = '__all__'
+
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInputImg)
+    countryimg = forms.ImageField(label='Countryimg', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
