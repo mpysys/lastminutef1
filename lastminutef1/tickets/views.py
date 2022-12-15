@@ -70,8 +70,13 @@ def ticket_detail(request, ticket_id):
     return render(request, 'ticket_detail.html', context)
 
 
+@login_required
 def add_ticket(request):
     """ Add a ticket to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the owner of the site can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
@@ -91,8 +96,13 @@ def add_ticket(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_ticket(request, ticket_id):
     """ Edit a ticket in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the owner of the site can do that.')
+        return redirect(reverse('home'))
+
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES, instance=ticket)
@@ -115,8 +125,13 @@ def edit_ticket(request, ticket_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_ticket(request, ticket_id):
     """ Delete a product from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only the owner of the site can do that.')
+        return redirect(reverse('home'))
+   
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     ticket.delete()
     messages.success(request, 'Ticket deleted!')
