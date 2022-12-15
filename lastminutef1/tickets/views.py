@@ -71,12 +71,12 @@ def ticket_detail(request, ticket_id):
 
 
 def add_ticket(request):
-    """ Add a product to the store """
+    """ Add a ticket to the store """
     if request.method == 'POST':
         form = TicketForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added product!')
+            messages.success(request, 'Successfully added ticket!')
             return redirect(reverse('add_ticket'))
         else:
             messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
@@ -86,6 +86,30 @@ def add_ticket(request):
     template = 'add_ticket.html'
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+def edit_ticket(request, ticket_id):
+    """ Edit a ticket in the store """
+    ticket = get_object_or_404(Ticket, pk=ticket_id)
+    if request.method == 'POST':
+        form = TicketForm(request.POST, request.FILES, instance=ticket)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated ticket!')
+            return redirect(reverse('ticket_detail', args=[ticket.id]))
+        else:
+            messages.error(request, 'Failed to update ticket. Please ensure the form is valid.')
+    else:
+        form = TicketForm(instance=ticket)
+        messages.info(request, f'You are editing {ticket.race}')
+
+    template = 'edit_ticket.html'
+    context = {
+        'form': form,
+        'ticket': ticket,
     }
 
     return render(request, template, context)

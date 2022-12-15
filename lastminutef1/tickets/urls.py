@@ -5,4 +5,5 @@ urlpatterns = [
     path('', views.all_tickets, name='tickets'),
     path('<int:ticket_id>', views.ticket_detail, name='ticket_detail'),
     path('add/', views.add_ticket, name='add_ticket'),
+    path('edit/<int:ticket_id>', views.edit_ticket, name='edit_ticket'),
 ]
