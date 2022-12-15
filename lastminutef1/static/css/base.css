@@ -53,7 +53,7 @@ body {
 .btn-outline-red:hover,
 .btn-outline-red:active,
 .btn-outline-red:focus {
-    background: #e10600;
+    background: #ad0701;
     color: white !important;
 }
 
@@ -63,7 +63,7 @@ body {
 .btn-red:hover,
 .btn-red:active,
 .btn-red:focus {
-    background: #e10600;
+    background: #ad0701;
     color: white;
 }
 
@@ -121,7 +121,7 @@ body {
   }
 
 a.category-badge > span.badge:hover {
-    background: #e10600 !important;
+    background: #ad0701 !important;
     color: #fff !important;
 }
 
@@ -256,8 +256,8 @@ input[name="q"]::placeholder{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
+    background-color: #e10600;
+    border: 1px solid #e10600;
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
@@ -270,12 +270,12 @@ input[name="q"]::placeholder{
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
 	color: #fff;
-    background-color: #222;
-    border-color: #222;
+    background-color: #ad0701;
+    border-color: #ad0701;
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #e10600; /* text-info */
 }
 
 
