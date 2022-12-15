@@ -1,0 +1,5 @@
+{% if item.ticket.image %}
+<img class="img-fluid rounded" src="{{ item.ticket.image.url }}" alt="{{ item.ticket.race }}">
+{% else %}
+<img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.ticket.race }}">
+{% endif %}
