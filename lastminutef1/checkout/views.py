@@ -70,7 +70,6 @@ def checkout_success(request, ticket_number):
     context = {
         'ticket_order': order,
     }
-
     return render(request, template, context)
 
 
@@ -163,7 +162,7 @@ def checkout(request):
                 'county': profile.default_county,
             })
         except UserProfile.DoesNotExist:
-            order_form = OrderForm()
+            order_form = TicketOrderForm()
     else:
         order_form = TicketOrderForm()
     if not stripe_public_key:

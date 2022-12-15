@@ -64,7 +64,7 @@ class TicketOrder(models.Model):
 class OrderLineItem(models.Model):
     order = models.ForeignKey(TicketOrder, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
     ticket = models.ForeignKey(Ticket, null=False, blank=False, on_delete=models.CASCADE)
-    ticket_days = models.CharField(max_length=2, null=True, blank=True) # Fri; Sat & Sun; Fri, Sat & Sun
+    ticket_days = models.CharField(max_length=20, null=True, blank=True) # Fri; Sat & Sun; Fri, Sat & Sun
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(max_digits=100, decimal_places=2, null=False, blank=False, editable=False)
 

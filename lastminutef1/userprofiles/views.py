@@ -17,9 +17,14 @@ def user_profile(request):
         if form.is_valid():
             form.save()
             messages.success(request, 'Profile updated successfully')
-
-    form = UserProfileForm(instance=userprofile)
+        else:
+            messages.error(request,
+                           ('Update failed. Please ensure '
+                            'the form is valid.'))
+    else:
+        form = UserProfileForm(instance=userprofile)
     orders = userprofile.orders.all()
+    print(orders)
 
     template = 'profiles/profile.html'
     context = {
@@ -30,18 +35,19 @@ def user_profile(request):
 
     return render(request, template, context)
 
+
 def order_history(request, ticket_number):
-    order = get_object_or_404(TicketOrder, ticket_number=ticket_number)
+    ticket_order = get_object_or_404(TicketOrder, ticket_number=ticket_number)
 
     messages.info(request, (
         f'This is a past confirmation for order number {ticket_number}. '
         'A confirmation email was sent on the order date.'
     ))
 
-    template = 'templates/checkout_success.html'
+    template = 'checkout_success.html'
     context = {
-        'order': order,
+        'ticket_order': ticket_order,
         'from_profile': True,
     }
-    
+
     return render(request, template, context)

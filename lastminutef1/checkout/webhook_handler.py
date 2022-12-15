@@ -64,7 +64,7 @@ class StripeWH_Handler:
         attempt = 1
         while attempt <= 5:
             try:
-                order = Order.objects.get(
+                order = TicketOrder.objects.get(
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     phone_number__iexact=shipping_details.phone,
@@ -80,7 +80,7 @@ class StripeWH_Handler:
                 )
                 order_exists = True
                 break
-            except Order.DoesNotExist:
+            except TicketOrder.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
         if order_exists:
@@ -90,7 +90,7 @@ class StripeWH_Handler:
         else:
             order = None
             try:
-                order = Order.objects.create(
+                order = TicketOrder.objects.create(
                     full_name=shipping_details.name,
                     user_profile=user_profile,
                     email=billing_details.email,
