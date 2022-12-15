@@ -32,7 +32,7 @@
             {% if request.user.is_superuser %}
                 <a href="{% url 'add_ticket' %}" class="dropdown-item">Ticket Management</a>
             {% endif %}
-            <a href="" class="dropdown-item">My Profile</a>
+            <a href="{% url 'user_profile' %}" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
         {% else %}
             <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
