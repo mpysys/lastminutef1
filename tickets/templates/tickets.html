@@ -71,16 +71,16 @@
                                         </div>
                                     </div>
                                     <hr>
+                                    {% if ticket.image %}
+                                    <a href="{% url 'ticket_detail' ticket.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
+                                    </a>
+                                    {% else %}
+                                    <a href="{% url 'ticket_detail' ticket.id %}">
+                                        <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
+                                    </a>
+                                    {% endif %}
                                 </div>
-                                {% if ticket.image %}
-                                <a href="{% url 'ticket_detail' ticket.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
-                                </a>
-                                {% else %}
-                                <a href="{% url 'ticket_detail' ticket.id %}">
-                                    <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
-                                </a>
-                                {% endif %}
                                 <div class="card-footer bg-white pt-0 border-0 text-right">
                                     <div class="col">
                                         <p class="lead mb-0 text-right font-weight-bold">${{ ticket.price }}</p>
@@ -139,6 +139,10 @@
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
 		})
+
+        $('.product-container .card').click(function(){
+            $(this).find('.card-img-top').parent().click();
+        }
 	</script>
     
     <script type="text/javascript">

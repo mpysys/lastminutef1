@@ -449,3 +449,6 @@ input[name="q"]::placeholder{
       font-size: .9rem;
   }
   
+  .product-container .card:hover {
+    border: 2px solid grey;
+  } 
