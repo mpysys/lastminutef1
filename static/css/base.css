@@ -14,7 +14,7 @@ a .card-body {
     color: initial;
 }
 
-div a.card-body:hover {
+div a:hover {
     text-decoration: none !important;
 }
 /* from Bulma */
