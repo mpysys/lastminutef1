@@ -9,237 +9,237 @@
 
 <url>
   <loc>https://lastminutef1.herokuapp.com/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/accounts/login/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/cart/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?sort=price&amp;direction=asc</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?sort=country&amp;direction=asc</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?sort=category&amp;direction=asc</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?category=paddockclub</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?category=teampaddock</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?category=grandstands</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/?category=paddockclub,teampaddock,grandstands</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/information/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lastminutef1.herokuapp.com/information/paddock/</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/27</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/28</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/71</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/57</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/58</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/141</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/142</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/98</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/97</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/86</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/85</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lastminutef1.herokuapp.com/tickets/86</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/43</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/44</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/125</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/126</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/83</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/84</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/154</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <loc>https://lastminutef1.herokuapp.com/tickets/83</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/153</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://lastminutef1.herokuapp.com/tickets/99</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <loc>https://lastminutef1.herokuapp.com/tickets/154</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/100</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lastminutef1.herokuapp.com/tickets/99</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/14</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/13</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/1</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/2</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/29</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/30</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/56</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/55</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/112</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/111</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/73</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lastminutef1.herokuapp.com/tickets/72</loc>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://lastminutef1.herokuapp.com/tickets/128</loc>
-  <lastmod>2022-12-16T11:50:09+00:00</lastmod>
+  <lastmod>2022-12-16T15:00:57+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
