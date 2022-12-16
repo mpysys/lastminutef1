@@ -318,64 +318,6 @@ input[name="q"]::placeholder{
     border-radius: 0;
 }
 
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
-
-
-.display-4.logo-font.text-white {
-    font-size: 2rem;
-}
-
-.nav-link {
-    padding: 0.15rem;
-}
-
-.nav-link i.fa-lg {
-    font-size: 1rem;
-}
-
-.navbar-toggler {
-    padding: .6rem .6rem;
-    font-size: 1rem;
-}
-
-#delivery-banner h4 {
-    font-size: .9rem;
-}
-
 .btn.btn-outline-black.rounded-0,
 .btn.btn-black.rounded-0 {
     padding: .375rem .375rem;
@@ -401,6 +343,9 @@ input[name="q"]::placeholder{
     display: none;
 }
 
+.text-white-50 {
+    min-height:140vh;
+}
 
 .footer-container {
     display: flex;
@@ -450,3 +395,61 @@ input[name="q"]::placeholder{
     color: white !important;
     min-width: 260px  !important;
 }
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 164px;
+      }
+  }
+  
+  /* pad the top a bit when navbar is collapsed on mobile */
+  @media (max-width: 991px) {
+      .header-container {
+          padding-top: 116px;
+      }
+  
+      body {
+          height: calc(100vh - 116px);
+      }
+  }
+  
+  
+  .display-4.logo-font.text-white {
+      font-size: 2rem;
+  }
+  
+  .nav-link {
+      padding: 0.15rem;
+  }
+  
+  .nav-link i.fa-lg {
+      font-size: 1rem;
+  }
+  
+  .navbar-toggler {
+      padding: .6rem .6rem;
+      font-size: 1rem;
+  }
+  
+  #delivery-banner h4 {
+      font-size: .9rem;
+  }
+  
