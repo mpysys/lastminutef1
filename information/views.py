@@ -12,4 +12,4 @@ def schedule(request):
 def paddock(request):
     """ A view to return the index page """
 
-    return render(request, 'paddock.html')
+    return render(request, 'paddockclub.html')
