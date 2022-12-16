@@ -343,10 +343,6 @@ input[name="q"]::placeholder{
     display: none;
 }
 
-.text-white-50 {
-    min-height:140vh;
-}
-
 .footer-container {
     display: flex;
     flex-direction: column-reverse;
