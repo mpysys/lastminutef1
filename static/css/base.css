@@ -10,7 +10,13 @@ body {
     font-family: 'Titillium Web';
 }
 
+a .card-body {
+    color: initial;
+}
 
+a .card-body:hover {
+    text-decoration: none !important;
+}
 /* from Bulma */
 .icon {
     align-items: center;
