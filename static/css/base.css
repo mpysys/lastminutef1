@@ -445,8 +445,8 @@ input[name="q"]::placeholder{
     width: 600px;
 }
 
-#mc-sub-button {
-    background: #e10600 !important;
+.mc-sub-button {
+    background-color: #e10600 !important;
     color: white !important;
     min-width: 260px  !important;
 }
