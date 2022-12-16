@@ -10,6 +10,10 @@ body {
     font-family: 'Titillium Web';
 }
 
+h1 {
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -430,4 +434,6 @@ input[name="q"]::placeholder{
     font-size: larger;
     color: #fff;
 }
+
+
 
