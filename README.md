@@ -1,7 +1,7 @@
 
 # Last Minute F1
 
-![Last Minute F1 ](../media/homepage_background_cropped.jpg 'Shows responsive views of site')
+![Last Minute F1 ](/media/homepage_background_cropped.jpg 'Shows responsive views of site')
 
 [View the live project here](https://lastminutef1.herokuapp.com/ "Link to deployed site - Last Minute F1")
 
@@ -177,13 +177,13 @@ A scope was defined to identify what needed to be done to align features with th
 Wireframe mockups were created using [Balsamiq](https://balsamiq.com/ 'Balsamiq Website').
 
 Home Page:
-![Home Page Wireframe](../lastminutef1/media/readme/home.png 'Home Page - Wireframe')
+![Home Page Wireframe](/media/readme/home.png 'Home Page - Wireframe')
 
 Ticket Page:
-![Ticket Page Wireframe](../lastminutef1/media/readme/ticket_page.png 'Ticket Page - Wireframe')
+![Ticket Page Wireframe](/media/readme/ticket_page.png 'Ticket Page - Wireframe')
 
 Ticket Detail:
-![ticket detail Wireframe](s../lastminutef1/media/readme/ticket_detail.png 'Ticket Detail - Wireframe')
+![ticket detail Wireframe](/media/readme/ticket_detail.png 'Ticket Detail - Wireframe')
 
 
 [Back to top ⇧](#top)
