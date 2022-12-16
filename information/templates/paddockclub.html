@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"> </div>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font mt-2">Paddock Club</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="container h-100 mt-2">
+                <h2>What is Paddock Club?</h2>
+                <p>
+                    <strong>
+                        The Formula 1 Paddock Club is a VIP hospitality package that offers 
+                        access to exclusive amenities and services at Formula 1 Grand Prix events. 
+                    </strong>
+                </p>
+                <p>
+                    As a member, you will have the best views of the track from luxurious facilities, 
+                    enjoy gourmet meals and open Champagne bars, and have the opportunity to get an up-close 
+                    look at the sport of Formula 1. 
+                </p>
+                <img src="{% static 'media/paddockclub.jpg' %}" alt="paddock image">
+                <p>
+                    In addition to the high-quality service and cuisine, 
+                    members of the Paddock Club also have access to exclusive experiences such as pit lane walks 
+                    and access to the Support Race Paddock.
+                </p>
+                <p>
+                    The package includes a privileged viewing position, 
+                    an official program, a pair of earplugs, entertainment, and more. All of these amenities are 
+                    included with the purchase of a Paddock Club ticket, which also grants access to the 
+                    circuit and privileged parking.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="btt-button shadow-sm rounded-0 border border-red ">
+        <a class="btt-link d-flex h-100 category-badge text-decoration-none">
+            <i class="fas fa-arrow-up text-nav-red mx-auto my-auto"></i>
+        </a>	
+    </div>
+
+{% endblock %}
