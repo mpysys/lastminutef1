@@ -389,3 +389,45 @@ input[name="q"]::placeholder{
 .increment-qty, .decrement-qty {
     padding: .25rem .5rem !important;
 }
+
+.bg-danger {
+    background-color:#e10600 !important;
+}
+
+
+/* footer section with social links */
+.footer-for-lg {
+    display: none;
+}
+
+
+.footer-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    font-size: 18px;
+}
+
+.social-links {
+    font-size: larger;
+    color: #fff;
+}
+
+.social-links>i:hover {
+    color: #e10600;
+}
+
+.flex-wrapper {
+    display: flex;
+    min-height: 80vh;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+.myname,
+.myname:hover {
+    text-decoration: none !important;
+    font-size: larger;
+    color: #fff;
+}
+
