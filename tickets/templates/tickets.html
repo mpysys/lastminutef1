@@ -65,7 +65,10 @@
                                         {% endif %}
                                         <p class="lead mb-0 text-left font-weight-bold">{{ ticket.country }}</p>
                                         <p class="mb-0"><strong></strong></p>
-                                        <p class="mb-0">{{ ticket.race }}</p>
+                                        <div class="mb-0 d-flex justify-content-between">
+                                            <div class="mb-0 d-flex">{{ ticket.race }}</div>
+                                            <div class="mb-0 d-flex">{{ ticket.dates }}</div>
+                                        </div>
                                     </div>
                                     <hr>
                                 </div>
