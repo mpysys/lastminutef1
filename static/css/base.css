@@ -436,4 +436,17 @@ input[name="q"]::placeholder{
     font-style: italic;
 }
 
+/* Mail chimp css */
 
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+
+#mc-sub-button {
+    background: #e10600 !important;
+    color: white !important;
+    min-width: 260px  !important;
+}
