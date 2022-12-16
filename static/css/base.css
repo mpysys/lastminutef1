@@ -450,5 +450,5 @@ input[name="q"]::placeholder{
   }
   
   .product-container .card:hover {
-    border: 2px solid grey;
+    border: 2px solid grey !important;
   } 
