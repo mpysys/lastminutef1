@@ -1,4 +1,6 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404, HttpResponse
+)
 from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
@@ -11,8 +13,10 @@ from userprofiles.models import UserProfile
 
 from cart.contexts import cart_contents
 
+
 import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -95,7 +99,7 @@ def checkout(request):
         if ticket_order_form.is_valid():
             order = ticket_order_form.save(commit=False)
             pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid 
+            order.stripe_pid = pid
             order.original_cart = json.dumps(cart)
             order.save()
             for item_id, item_data in cart.items():

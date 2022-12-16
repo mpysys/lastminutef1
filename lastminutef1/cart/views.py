@@ -27,20 +27,28 @@ def add_to_cart(request, item_id):
         if item_id in list(cart.keys()):
             if racelength in cart[item_id]['race_by_length'].keys():
                 cart[item_id]['race_by_length'][racelength] += quantity
-                messages.success(request, f'Updated {racelength.upper()} day tickets for the {ticket.race} race to x {cart[item_id]["race_by_length"][racelength]}')
+                messages.success(request, f'Updated {racelength.upper()} day \
+                                tickets for the {ticket.race} race \
+                                to x \
+                                {cart[item_id]["race_by_length"][racelength]}')
             else:
                 cart[item_id]['race_by_length'][racelength] = quantity
-                messages.success(request, f'Added {racelength.upper()} day tickets for the {ticket.race} race to your cart')
+                messages.success(request, f'Added {racelength.upper()} \
+                                day tickets for the {ticket.race} \
+                                race to your cart')
         else:
             cart[item_id] = {'race_by_length': {racelength: quantity}}
-            messages.success(request, f'Added {racelength.upper()} day tickets for the {ticket.race} race to your cart')
+            messages.success(request, f'Added {racelength.upper()} day \
+                            tickets for the {ticket.race} race to your cart')
     else:
         if item_id in list(cart.keys()):
             cart[item_id] += quantity
-            messages.success(request, f'Updated {ticket.race} race tickets to x {cart[item_id]}')
+            messages.success(request, f'Updated {ticket.race} \
+                            race tickets to x {cart[item_id]}')
         else:
             cart[item_id] = quantity
-            messages.success(request, f'Added {ticket.race} race tickets to your cart')
+            messages.success(request, f'Added {ticket.race} \
+                            race tickets to your cart')
 
     request.session['cart'] = cart
     return redirect(redirect_url)
@@ -59,19 +67,24 @@ def adjust_cart(request, item_id):
     if racelength:
         if quantity > 0:
             cart[item_id]['race_by_length'][racelength] = quantity
-            messages.success(request, f'Updated {racelength.upper()} day tickets for the {ticket.race} race x {cart[item_id]["race_by_length"][racelength]}')
+            messages.success(request, f'Updated {racelength.upper()} day \
+                            tickets for the {ticket.race} race \
+                            x {cart[item_id]["race_by_length"][racelength]}')
         else:
             del cart[item_id]['race_by_length'][racelength]
             if not cart[item_id]['race_by_length']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed {racelength.upper()} day tickets for the {ticket.race} race from your cart')
+            messages.success(request, f'Removed {racelength.upper()} day \
+                            tickets for the {ticket.race} race from your cart')
     else:
         if quantity > 0:
             cart[item_id] = quantity
-            messages.success(request, f'Updated {ticket.race} ticket quantity to x {cart[item_id]}')
+            messages.success(request, f'Updated {ticket.race} \
+                            ticket quantity to x {cart[item_id]}')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed tickets for {ticket.race} from your cart')
+            messages.success(request, f'Removed tickets \
+                            for {ticket.race} from your cart')
 
     request.session['cart'] = cart
     return redirect(reverse('view_cart'))
@@ -90,10 +103,12 @@ def remove_from_cart(request, item_id):
             del cart[item_id]['race_by_length'][racelength]
             if not cart[item_id]['race_by_length']:
                 cart.pop(item_id)
-            messages.success(request, f'Removed all {racelength.upper()} tickets for the {ticket.race} race from your cart')
+            messages.success(request, f'Removed all {racelength.upper()} \
+                            ticket for the {ticket.race} race from your cart')
         else:
             cart.pop(item_id)
-            messages.success(request, f'Removed {ticket.race} race tickets from your cart')
+            messages.success(request, f'Removed {ticket.race} race \
+                            tickets from your cart')
 
         request.session['cart'] = cart
         return HttpResponse(status=200)

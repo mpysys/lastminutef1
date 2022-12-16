@@ -8,6 +8,7 @@ from .forms import TicketForm
 
 # Create your views here.
 
+
 def all_tickets(request):
     """ A view to show all tickets, including sorting and search queries """
 
@@ -87,7 +88,7 @@ def add_ticket(request):
             messages.error(request, 'Failed to add ticket. Please ensure the form is valid.')
     else:
         form = TicketForm()
-        
+
     template = 'add_ticket.html'
     context = {
         'form': form,
@@ -131,7 +132,7 @@ def delete_ticket(request, ticket_id):
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only the owner of the site can do that.')
         return redirect(reverse('home'))
-   
+
     ticket = get_object_or_404(Ticket, pk=ticket_id)
     ticket.delete()
     messages.success(request, 'Ticket deleted!')
