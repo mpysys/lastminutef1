@@ -51,36 +51,34 @@
                 <div class="row">
                     {% for ticket in tickets %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                <div class="card-body pb-0">
-                                    <div class="col">
-                                        {% if ticket.image %}
-                                        <a href="{% url 'ticket_detail' ticket.id %}">
-                                            <img class="card-img-top img-fluid flag-country" src="{{ ticket.countryimg.url }}" alt="{{ ticket.race }}">
-                                        </a>
-                                        {% else %}
-                                        <a href="{% url 'ticket_detail' ticket.id %}">
-                                            <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
-                                        </a>
-                                        {% endif %}
-                                        <p class="lead mb-0 text-left font-weight-bold">{{ ticket.country }}</p>
-                                        <p class="mb-0"><strong></strong></p>
-                                        <div class="mb-0 d-flex justify-content-between">
-                                            <div class="mb-0 d-flex">{{ ticket.race }}</div>
-                                            <div class="mb-0 d-flex">{{ ticket.dates }}</div>
+                            <div class="card h-100">
+                                <a href="{% url 'ticket_detail' ticket.id %}">
+                                    <div class="card-body pb-0">
+                                        <div class="col">
+                                            {% if ticket.image %}
+                                            <a href="">
+                                                <img class="card-img-top img-fluid flag-country" src="{{ ticket.countryimg.url }}" alt="{{ ticket.race }}">
+                                            </a>
+                                            {% else %}
+                                            <a href="{% url 'ticket_detail' ticket.id %}">
+                                                <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
+                                            </a>
+                                            {% endif %}
+                                            <p class="lead mb-0 text-left font-weight-bold">{{ ticket.country }}</p>
+                                            <p class="mb-0"><strong></strong></p>
+                                            <div class="mb-0 d-flex justify-content-between">
+                                                <div class="mb-0 d-flex">{{ ticket.race }}</div>
+                                                <div class="mb-0 d-flex">{{ ticket.dates }}</div>
+                                            </div>
                                         </div>
+                                        <hr>
+                                        {% if ticket.image %}
+                                            <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
+                                        {% else %}
+                                            <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
+                                        {% endif %}
                                     </div>
-                                    <hr>
-                                    {% if ticket.image %}
-                                    <a href="{% url 'ticket_detail' ticket.id %}">
-                                        <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
-                                    </a>
-                                    {% else %}
-                                    <a href="{% url 'ticket_detail' ticket.id %}">
-                                        <img class="card-img-top img-fluid flag-country" src="{{ MEDIA_URL }}noimage.png" width="50" height="50" alt="{{ ticket.race }}">
-                                    </a>
-                                    {% endif %}
-                                </div>
+                                </a>
                                 <div class="card-footer bg-white pt-0 border-0 text-right">
                                     <div class="col">
                                         <p class="lead mb-0 text-right font-weight-bold">${{ ticket.price }}</p>
@@ -138,11 +136,7 @@
     <script type="text/javascript">
 		$('.btt-link').click(function(e) {
 			window.scrollTo(0,0)
-		})
-
-        $('.product-container .card').click(function(){
-            $(this).find('.card-img-top').parent().click();
-        });
+		});
 	</script>
     
     <script type="text/javascript">
