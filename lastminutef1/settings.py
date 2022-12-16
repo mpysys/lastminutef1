@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'lastminutef1.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        'default': dj_database_url.parse(os.environ.gget('postgres://oncwkxfu:wgb5_4yiz7RpctYlUjMYT6Aw8L01cnhR@mel.db.elephantsql.com/oncwkxfu'))
+        'default': dj_database_url.parse(os.environ.get('postgres://oncwkxfu:wgb5_4yiz7RpctYlUjMYT6Aw8L01cnhR@mel.db.elephantsql.com/oncwkxfu'))
     }
 else:
     DATABASES = {
