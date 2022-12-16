@@ -6,25 +6,27 @@
             <div class="col"></div>
         </div>
     </div>
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 logo-font text-black">
-                    We couldn't find the page you were looking for
-                </h1>
-                <p>You may have mistyped the URL or the page may have moved:</p>
+    <div class="overlay"></div>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-7 col-md-6 my-auto">
+                    <h1 class="display-4 logo-font text-white">
+                        We couldn't find the page you were looking for
+                    </h1>
+                    <p>You may have mistyped the URL or the page may have moved:</p>
 
-                <p>
-                Why not try navigating back to the homepage to find what you are looking for
-                Alternatively you can contact us via email here
-                </p>
-                <div class="my-5">
-                    <h4>
-                        <a href="{% url 'tickets' %}" 
-                            class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
-                                Return to shop
-                        </a>
-                    </h4>
+                    <p>
+                    Why not try navigating back to the homepage to find what you are looking for
+                    Alternatively you can contact us via email here
+                    </p>
+                    <div class="my-5">
+                        <h4>
+                            <a href="{% url 'tickets' %}" 
+                                class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">
+                                    Return to shop
+                            </a>
+                        </h4>
+                    </div>
                 </div>
             </div>
         </div>
