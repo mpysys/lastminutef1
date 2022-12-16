@@ -10,13 +10,6 @@ body {
     font-family: 'Titillium Web';
 }
 
-a .card-body {
-    color: initial;
-}
-
-div a:hover {
-    text-decoration: none !important;
-}
 /* from Bulma */
 .icon {
     align-items: center;
@@ -458,3 +451,10 @@ input[name="q"]::placeholder{
   .product-container .card:hover {
     border: 1px solid grey !important;
   } 
+  
+  .product-container .card a,
+  .product-container .card:hover a:hover {
+    color:initial;
+    text-decoration: none;
+  } 
+  
