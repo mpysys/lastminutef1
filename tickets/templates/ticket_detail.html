@@ -15,6 +15,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
+                    <div class="col-sm-6">
                     {% if ticket.image %}
                         <a href="{{ ticket.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ ticket.image.url }}" alt="{{ ticket.race }}">
@@ -24,6 +25,10 @@
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ ticket.race }}">
                         </a>
                     {% endif %}
+                    </div>
+                    <div class="col-sm-6">
+                        <p>{{ ticket.dates }}</p>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
