@@ -439,7 +439,7 @@ input[name="q"]::placeholder{
 /* Mail chimp css */
 
 #mc_embed_signup {
-    background: #fff;
+    background: #343a40;
     clear: left;
     font: 14px Helvetica, Arial, sans-serif;
     width: 600px;
